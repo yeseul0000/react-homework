@@ -1,0 +1,16 @@
+body, body *{
+  background-color: black;
+  color: white;
+  white-space: pre-line;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+section{
+  text-align: center;
+}
