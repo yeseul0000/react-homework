@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 // data
 const data ={
@@ -21,15 +23,25 @@ const createApp = (data, styles) =>{
                 <a style={styles.login} href={data.hrefLink[1]}>{data.anchorMessage[1]}</a>
             </div>
         </header>
-        <section style={styles.section_promotion_top}>
+        <section style={{
+            backgroundImage: `url("/src/assets/background-img.png")`,
+            height: '500px',
+        }}>
             <h2 style={styles.sr_only}>{data.seconsHeading[0]}</h2>
             <p style={styles.p_large}>{data.promotionMessage[0]}</p>
             <p>{data.promotionMessage[1]}</p>
             <a style={styles.callToSignup} href={data.hrefLink[1]}>{data.anchorMessage[1]}</a>
         </section>
         <section>
-            <h2>{data.seconsHeading[1]}</h2>
+            <h2 style={styles.h2_heading}>{data.seconsHeading[1]}</h2>
             <p>{data.promotionMessage[2]}</p>
+            <div>
+               <div style={styles.skeleton_swiper_wrapper}>
+                    <div style={styles.skeleton_swiper}></div>
+                    <div style={styles.skeleton_swiper}></div>
+                    <div style={styles.skeleton_swiper}></div>
+              </div>
+          </div>
         </section>
         <section>
             <h2 style={styles.sr_only}>{data.seconsHeading[0]}</h2>
@@ -79,16 +91,34 @@ const styles = {
         'padding':'100px 0 10px 0',
     },
     callToSignup:{
-        'margin': '0 auto',
+        'margin': '20px auto 100px auto',
         'color': 'white',
         'display': 'flex',
         'border-radius': '4px',
         'background': 'var(--brand-red-2, #1C358E)',
         'width' : '300px',
-        'height' : '35px',
-        'margin-top' : '10px',
+        'height' : '35px',  
+        'display':'flex',
+        'justify-content':'center',
+        'align-items':'center',
     },
-    section_promotion_top:{
+    skeleton_swiper_wrapper:{
+        'padding': '0 10px',
+        'width': '100%',
+        'height': '350px',
+        'display': 'flex',
+        'justify-content': 'space-between',
+        'margin-bottom':'100px'
+    },
+    skeleton_swiper:{
+        'background':'#1C358E',
+        'width': '300px',
+        'height': '280px',
+        'border-radius': '10px',
+        'margin':'30px 30px',
+    },
+    h2_heading:{
+        'padding-top':'50px'
     }
 };
 
