@@ -33,8 +33,11 @@ function GetPbImg({ contents }) {
     <ul>
       {contents?.map((content) => (
         <li key={content.id}>
-          <img src={content.image} alt={content.title} />
-          {console.log("Image URL:", content.id)}
+          <img
+            src={`${API}/api/files/${content.collectionId}/${content.id}/${content.image}`}
+            alt={content.title}
+          />
+          {console.log("Image URL:", content.image)}
         </li>
       ))}
     </ul>
