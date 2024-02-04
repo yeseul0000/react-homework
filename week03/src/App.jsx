@@ -68,6 +68,7 @@ function App() {
   return (
     <>
       <GetPbImg contents={thumbnailContents} />
+      <GetPbImg contents={thumbnailContents} />
     </>
   );
 }
