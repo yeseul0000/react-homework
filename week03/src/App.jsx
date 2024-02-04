@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
-const API = import.meta.env.VITE_PB_URL;
+const API = import.meta.env.VITE_PB_API;
+const fetchURL = `${API}/api/collections/landing_animationImg/records`;
 
 async function fetchThumbnail(options) {
   try {
-    const fetchURL = `${API}/api/collections/landing_animationImg`;
     const response = await fetch(fetchURL, options);
 
     if (!response.ok) {
@@ -29,9 +29,16 @@ async function fetchThumbnail(options) {
 }
 
 function GetPbImg({ contents }) {
-  return contents?.map((content) => (
-    <img key={content.id} src={content.image} alt="" />
-  ));
+  return (
+    <ul>
+      {contents?.map((content) => (
+        <li key={content.id}>
+          <img src={content.image} alt={content.title} />
+          {console.log("Image URL:", content.id)}
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 function App() {
