@@ -1,8 +1,19 @@
-# React + Vite
+## 구현 요구사항
+- [x]  바닐라 프로젝트에서 동적으로 렌더링했던 UI 조각을 선택합니다.
+- [x]  바닐라 프로젝트에서 활용했던 데이터베이스의 
+데이터를 JSON 파일로 로컬 드라이브에 저장합니다.
+- [x]  JSON 데이터를 불러와 마크업에 연결하여 UI를 구현하세요.
+필요한 경우, 리스트 렌더링을 활용해보세요.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## 진행흐름
+1. 영화 api를 fetch 해오기
+2. form을 만들어 불러온 api 영화 목록, 별점 select, input 내용을 submit 하도록 함
+3. submit 하면 작성한 내용과 해당 영화의 이미지가 리스트업 됨.
+4. 테일윈드 적용해서 스타일링
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 시연 
+
+https://github.com/yeseul0000/react-homework/assets/148925429/f05ff5db-5a44-4b69-8e20-3c676f68ab01
+
+
