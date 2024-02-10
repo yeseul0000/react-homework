@@ -71,11 +71,11 @@ function App() {
   return (
     <div>
       <h1 className="text-4xl	text-slate-300 pb-5">영화 평점 매기기</h1>
-      <form className="form" onSubmit={onSubmit}>
+      <form className="form flex space-x-2 justify-center" onSubmit={onSubmit}>
         <MovieSelect />
         <Stars />
         <input name="comment"></input>
-        <button className="">전송</button>
+        <button className="bg-slate-50">전송</button>
       </form>
     </div>
   );
