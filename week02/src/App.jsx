@@ -55,25 +55,27 @@ function App() {
 
     const form = document.querySelector(".form");
     const newElementsHTML = `
-    <div>
-      <img src=${imgUrl} >
-      <h2>${selectedMovie}</h2>
-      <p>${selectedStars}</p>
-      <p>${comment}</p>
-    </div>
+    <section class="flex justify-center flex-col">
+     <h2 class="text-3xl">${selectedMovie}</h2>
+      <img class="size-1/5 mx-auto" src="${imgUrl}" alt="${selectedMovie} Poster">
+      <p class="text-2xl">${selectedStars}</p>
+      <p class="text-1xl">${comment}</p>
+      <br class="text-white"/>
+  </section>
+
   `;
 
     form.insertAdjacentHTML("beforebegin", newElementsHTML);
   };
 
   return (
-    <div className="">
-      <h1>영화 평점 매기기</h1>
+    <div>
+      <h1 className="text-4xl	text-slate-300 pb-5">영화 평점 매기기</h1>
       <form className="form" onSubmit={onSubmit}>
         <MovieSelect />
         <Stars />
         <input name="comment"></input>
-        <button>전송</button>
+        <button className="">전송</button>
       </form>
     </div>
   );
